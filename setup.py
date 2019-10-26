@@ -16,5 +16,5 @@ setuptools.setup(
     name="these",
     py_modules=['these'],
     url="https://github.com/brandtbucher/these",
-    version=0,
+    version=1,
 )
