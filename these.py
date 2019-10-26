@@ -25,8 +25,6 @@ for c in (65, 97):
     for i in range(26):
         d[chr(i+c)] = chr((i+13) % 26 + c)
 
-import random
-
 m = {}
 for l in s.splitlines()[2:]:
     for a, b in zip(l.split(), l.split()[1:]):
@@ -35,8 +33,9 @@ for l in s.splitlines()[2:]:
 for l in s.splitlines()[2:]:
     w = [l.split()[0]]
     while w[-1] in m:
-        r = random.choice(m[w[-1]])
-        m[w[-1]].remove(r)
+        v = m[w[-1]]
+        r = v[hash(s) % len(v)]
+        v.remove(r)
         w.append(r)
     s = s.replace(l, " ".join(w))
 
