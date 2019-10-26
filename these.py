@@ -31,7 +31,7 @@ for l in s.splitlines()[2:]:
         m.setdefault(a, []).append(b)
 
 for l in s.splitlines()[2:]:
-    w = [l.split()[0]]
+    w = [l.split(" ", 1)[0]]
     while w[-1] in m:
         v = m[w[-1]]
         r = v[hash(s) % len(v)]
