@@ -7,7 +7,7 @@ with open("README.md") as readme:
 
 setuptools.setup(
     author="Brandt Bucher",
-    author_email="brandtbucher@gmail.com",
+    author_email="brandt@python.org",
     description="The Markov Zenerator.",
     keywords="Markov Zen this",
     license="MIT",
